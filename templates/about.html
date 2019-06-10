@@ -2,5 +2,21 @@
 
 {% block content %}
 Hello everyone. It's about page
+{{ my_txt }}
+
+<ul>
+    {% for my_item in my_list %}
+        {% if my_item == 22 %}
+            hi
+        {% elif my_item == 33 %}
+            hello
+            {{my_item|add:10}}
+        {% else %}
+            in else
+        {% endif %}
+    <li>{{ forloop.counter }}-{{ my_item }}</li>
+    {% endfor %}
+</ul>
+
 {{request.user}}
 {% endblock %}
