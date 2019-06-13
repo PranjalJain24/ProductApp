@@ -4,6 +4,16 @@ from .forms import CourseModelForm
 from .models import Course
 # BASE VIEW Class =VIEW
 
+class CourseObjectMixin(object):
+    model= Course
+    #lookup = 'id'   
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None:
+            obj=get_object_or_404(self.model, id=id)
+        return obj    
+
 
 class CourseCreateView(View):
     template_name = 'courses/course_create.html'
@@ -22,7 +32,7 @@ class CourseCreateView(View):
         context = {"form": form}
         return render(request, self.template_name, context)
     
-class CourseUpdateView(View):
+class CourseUpdateView(CourseObjectMixin, View):
     template_name = 'courses/course_update.html'
     def get_object(self):
         id = self.kwargs.get('id')
@@ -69,24 +79,15 @@ class CourseListView(View):
 # class MyListView(CourseListView):    #inheritance also possible
 #     queryset = Course.objects.filter(id=1)
 
-class CourseView(View):
+class CourseView(CourseObjectMixin, View):
     template_name = 'courses/course_detail.html'
     #GET Method
     def get(self, request, id=None, *args, **kwargs): #None means id is not required
-        context = {}
-        if id is not None:
-            obj=get_object_or_404(Course, id=id)
-            context['object'] = obj
+        context = {'object': self.get_object()}
         return render(request, self.template_name, context)
 
-class CourseDeleteView(View):
+class CourseDeleteView(CourseObjectMixin, View): #maintain seq of args
     template_name = 'courses/course_delete.html'
-    def get_object(self):
-        id = self.kwargs.get('id')
-        obj = None
-        if id is not None:
-            obj=get_object_or_404(Course, id=id)
-        return obj
     
     def get(self, request, id=None, *args, **kwargs): 
         #GET Method
