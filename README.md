@@ -28,7 +28,7 @@ python manage.py runserver
 ```
 For the commands of setup and installations you can refer [https://github.com/PranjalJain24/DjangoArchitecture]
 
-#### Instructions to set up this application from scratch refer to the video series: [https://www.youtube.com/playlist?list=PLEsfXFp6DpzTD1BD1aWNxS2Ep06vIkaeW](Try Django You Tube series)
+#### Instructions to set up this application from scratch refer to the video series: [Try Django You Tube series](https://www.youtube.com/playlist?list=PLEsfXFp6DpzTD1BD1aWNxS2Ep06vIkaeW)
 
 
 ### Apps
