@@ -8,11 +8,11 @@ A project to undersatnd the basics of the Django Framework. It deals with creati
 * Activate the virtual environment.
 * Clone the repository using:
 ```
-$ git clone https://github.com/PranjalJain24/pollsApp  
+$ git clone https://github.com/PranjalJain24/ProductApp  
 ```
 If you want to clone the repository into a directory named something other than pollsApp, you can specify the new directory name as an additional argument:
 ```
-$ git clone https://github.com/PranjalJain24/pollsApp/edit/master/README.md mynewgit
+$ git clone https://github.com/PranjalJain24/ProductApp/edit/master/README.md mynewgit
 ```
 That command does the same thing as the previous one, but the target directory is called mynewgit.
   
