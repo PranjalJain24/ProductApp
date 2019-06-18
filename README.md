@@ -6,8 +6,10 @@ A project to undersatnd the basics of the Django Framework. It deals with creati
 * Django Framework
 
 ### Installation
-Start the project by: django-admin startproject <projectname>
+Start the project by: django-admin startproject <projectname>. 
+  
 After that create the below apps in the project.
+
 For the commands of setup and installations you can refer [https://github.com/PranjalJain24/DjangoArchitecture]
 
 ### Apps
