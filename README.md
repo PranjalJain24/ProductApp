@@ -2,15 +2,34 @@
 A project to undersatnd the basics of the Django Framework. It deals with creating a few apps like Products, Pages, Blogs and Courses implementing various features of Django including function based views and class based views.
 
 ### Installation and Setup
-* Virtual Environmet
-* Django Framework
 
-### Installation
-Start the project by: django-admin startproject <projectname>. 
+#### Instructions to set up this application from repository:
+* Setup virtual Environment for the project.
+* Activate the virtual environment.
+* Clone the repository using:
+```
+$ git clone https://github.com/PranjalJain24/pollsApp  
+```
+If you want to clone the repository into a directory named something other than pollsApp, you can specify the new directory name as an additional argument:
+```
+$ git clone https://github.com/PranjalJain24/pollsApp/edit/master/README.md mynewgit
+```
+That command does the same thing as the previous one, but the target directory is called mynewgit.
   
-After that create the below apps in the project.
-
+* Install Django related requirements and dependencies using:
+```
+pip install -r requirements.txt
+```
+* Make migrations for Database.
+* Create admin user using createsuperuser.
+* Run django server: 
+```
+python manage.py runserver
+```
 For the commands of setup and installations you can refer [https://github.com/PranjalJain24/DjangoArchitecture]
+
+#### Instructions to set up this application from scratch refer to the video series: [https://www.youtube.com/playlist?list=PLEsfXFp6DpzTD1BD1aWNxS2Ep06vIkaeW](Try Django You Tube series)
+
 
 ### Apps
 * Products:
